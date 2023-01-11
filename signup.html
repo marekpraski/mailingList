@@ -16,7 +16,7 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
         <!-- Favicons -->
-    <link rel="shortcut icon" href="pinata.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/pinata.ico" type="image/x-icon">
     <meta name="theme-color" content="#7952b3">
 
 
@@ -38,25 +38,25 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="signup.css" rel="stylesheet">
+    <link href="css/signup.css" rel="stylesheet">
   </head>
   <body class="text-center">
     
 <main class="form-signin">
-  <form>
-    <img class="mb-4" src="images/bomb.png" alt="" width="72" height="72">
+  <form action="/"  method="post">
+    <img class="mb-4" src="images/pinata_large.png" alt="" width="72" height="72">
     <h1 class="h3 mb-3 fw-normal">Contact details</h1>
     <div class="form-floating">
-        <input type="firstName" class="form-control" id="floatingFirstName" placeholder="First name">
+        <input type="text" class="form-control" name="floatingFirstName" placeholder="First name" autofocus required>
         <label for="floatingFirstName">First name</label>
       </div>
     <div class="form-floating">
-    <input type="surname" class="form-control" id="floatingSurname" placeholder="Surname">
+    <input type="text" class="form-control" name="floatingSurname" placeholder="Surname" required>
     <label for="floatingSurname">Surname</label>
     </div>
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-      <label for="floatingInput">Email address</label>
+      <input type="email" class="form-control" name="floatingEmail" placeholder="name@example.com" required>
+      <label for="floatingEmail">Email address</label>
     </div>
 
 
@@ -68,6 +68,7 @@
     <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
     <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
   </form>
+
 </main>
 
 

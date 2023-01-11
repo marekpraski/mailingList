@@ -1,20 +1,20 @@
 const express = require("express");
-const https = require("node:https");
 const bodyParser = require("body-parser");
-const request = require("request");
-bodyParser.urlencoded({extended: true});
 
 const app = express();
+app.use(express.static("public"));
+app.use(bodyParser.urlencoded({extended: true}));
 
-app.get("/", (req, res)=>{
+app.get("/", function(req, res){
     res.sendFile(__dirname + "/signup.html");
-
 });
 
-
-
-
-
+app.post("/", (req, res)=>{
+    let n = req.body.floatingFirstName;
+    let s = req.body.floatingSurname;
+    let e = req.body.floatingEmail;
+    console.log(n + " " + s + " " + e);
+});
 
 
 app.listen(3000, ()=>{
